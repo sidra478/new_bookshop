@@ -1,0 +1,26 @@
+<%= form_for @book do |f| %>
+
+ <div class = 'field'>
+    <%= f.label :tile, style: "display: block" %>
+    <%= f.text_field :tile , placeholder:"Book name"%>
+  </div>
+
+  <div class = 'field'>
+    <%= f.label :description, style: "display: block" %>
+    <%= f.text_field :description %>
+  </div>
+
+<br/>
+  <div class="btn btn-warning" >
+    <%= f.submit %>
+  </div>
+
+
+  <div class="btn btn-warning" >
+    <%= link_to "Back to books", books_path %>  
+  </div>
+ 
+ 
+
+<% end %> 
+

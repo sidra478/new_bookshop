@@ -1,0 +1,16 @@
+<h2> Books Description </h2>
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4"> <%= @book.tile%> <%= @book.description %>  </h1>
+  
+  <br/><br/>
+  <p class="lead">
+    <%= link_to "Edit this book", edit_book_path(@book) ,class:"btn btn-secondary"%> 
+  <%= link_to "Back to books", books_path ,class:"btn btn-dark"%> 
+
+  </p>
+
+  <%= button_to "Destroy this book", @book, method: :delete %>
+</div>

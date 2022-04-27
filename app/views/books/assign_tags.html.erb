@@ -1,0 +1,11 @@
+<h1> Assign Different Tags To Books</h1>
+
+<%= form_tag assign_book_tags_url, method: :post do |form| %>
+
+  <%= select_tag(:book_id, options_for_select(@books.map{|b| [b.tile,b.id]})) %>
+  <br>  <br>
+
+  <%= select_tag(:tag_id, options_for_select(@tags.map{|t| [t.name,t.id]})) %> <br> <br>
+  <%= submit_tag "submit", class: "btn btn-warning" %>
+
+<% end %>
